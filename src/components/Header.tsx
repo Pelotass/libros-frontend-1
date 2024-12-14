@@ -15,11 +15,12 @@ const Header: React.FC = () => {
         <div className="flex items-center space-x-4">
           <span className="text-sm text-gray-600">Hola, {user?.name}</span>
           <button
-            onClick={() => logout({ returnTo: window.location.origin })}
-            className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark"
-          >
-            Cerrar sesión
-          </button>
+  onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
+  className="bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark"
+>
+  Cerrar sesión
+</button>
+
         </div>
       </div>
     </header>
